@@ -1,10 +1,9 @@
 function solution(food) {
-    const arr = food.map((x) => Math.floor(x / 2)).slice(1);
-    const left = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        left.push(String(i + 1).repeat(arr[i]));
+    const arr = [];
+    
+    for (let i = 1; i < food.length; i++) {
+        arr.push(String(i).repeat(Math.floor(food[i] / 2)));
     }
 
-    return left.join('') + '0' + [...left.join('')].reverse().join('');
+    return arr.join('') + '0' + [...arr.join('')].reverse().join('');
 }
