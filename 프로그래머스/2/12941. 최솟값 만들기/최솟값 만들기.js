@@ -1,5 +1,6 @@
 function solution(A,B){
-    const arrA = A.sort((a, b) => a - b);
-    const arrB = B.sort((a, b) => b - a);
-    return arrA.reduce((acc, cur, i) => acc + (cur * arrB[i]), 0);
+    // sort 메서드는 원본 배열 자체를 바꾼다
+    A.sort((a, b) => a - b);
+    B.sort((a, b) => b - a);
+    return A.reduce((acc, cur, i) => acc + (cur * B[i]), 0);
 }
