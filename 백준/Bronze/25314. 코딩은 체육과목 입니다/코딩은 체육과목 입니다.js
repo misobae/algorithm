@@ -4,12 +4,10 @@ const input = require("fs")
   .trim()
   .split(" ");
 
-let longArr = [];
+let text = '';
 
 for (let i = 1; i <= input / 4; i++) {
-  longArr.push('long');
+  text += 'long ';
 }
 
-longArr.push('int');
-
-console.log(longArr.join(' '));
+console.log(text + 'int');
